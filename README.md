@@ -1,21 +1,5 @@
 # SCS Challenge 2023 - ProDoctor
 
-## Starting the mobile app
-
-### Frontend
-1. cd to frontend
-2. run `yarn install`
-3. run `npx expo start`
-4. download expo app on your phone
-5. scan the QR code with your phone
-6. Play with the app
-
-### Backend
-1. cd to backend/db-services
-2. run `yarn install`
-3. run `yarn start`
-
-
 ## IDEAS
 1. App to analyze health condition based on the data from the smartwatch
 2. App able to get data of user:
