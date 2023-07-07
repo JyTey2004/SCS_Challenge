@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useState } from 'react'
 import { useNavigation } from '@react-navigation/core'
-import { createAccount } from '../../Api/AccountsApi'
+import { createUser } from '../../Apis/userApi'
 import { FloatingLabelInput } from 'react-native-floating-label-input';
 import { Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -26,11 +26,9 @@ const RegisterScreen = () => {
         username: username,
         email: email,
         password: password,
-        points: 0,
-        challengesCompleted: [],
-        rewardsClaimed: [],
+        healthInfo: []
       }
-      const response = await createAccount(account); // Call the createAccount API
+      const response = await createUser(account); // Call the createAccount API
       if (response.isSuccess) {
         // console.log('account:', response.message);
         // Handle the successful response here, e.g., update component state with the fetched account
@@ -51,9 +49,9 @@ const RegisterScreen = () => {
         
         <View className='p-3 rounded-xl bg-black mb-3 w-3/5'>
             <View className='mb-3 flex-row items-center'>
-                <Text className='text-white text-3xl font-bold flex-1'>Register</Text>
-                <TouchableOpacity onPress={() => navigation.navigate('AccountScreen')}>
-                    <Ionicons name="close-circle-outline" size={35} color="white" />
+                <Text className='text-green-300 text-5xl font-bold flex-1'>Register</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('Welcome')}>
+                    <Ionicons name="close-circle-outline" size={50} color="#86efac" />
                 </TouchableOpacity>
             </View>
             
@@ -190,7 +188,7 @@ const RegisterScreen = () => {
             </View>
             
             <LinearGradient
-                colors={['rgba(50, 50, 50, 0.9)', 'rgba(240, 171, 252, 1)']}
+                colors={['rgba(50, 50, 50, 0.9)', '#86efac']}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 0 }}
                 className='p-2 rounded-xl mt-3'
@@ -218,8 +216,8 @@ const RegisterScreen = () => {
         
         <View className='flex-row justify-center items-center'>
             <Text className='text-white text-lg font-semibold'>Already have an account?</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('login')}>
-                <Text className='text-lg font-semibold ml-2 text-fuchsia-300'>Login</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                <Text className='text-lg font-semibold ml-2 text-green-300'>Login</Text>
             </TouchableOpacity>
         </View>
 

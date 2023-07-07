@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
+const userRoutes = require('./routes/userRoutes');
 
 mongoose.connect(
     process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, dbName: 'ProDoctor' }
@@ -34,9 +35,7 @@ app.use(express.urlencoded({
 // Routes
 app.use(express.json())
 
-app.use('/test', (req, res) => {
-    res.send('Hello World!')
-})
+app.use('/user', userRoutes);
 
 //setup server to listen on port 8080
 app.listen(process.env.PORT || 8080, () => {
