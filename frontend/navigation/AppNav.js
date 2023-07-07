@@ -2,11 +2,17 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import AuthStack from './AuthStack'
+import { AuthContext } from '../context/AuthContext';
+import { useContext } from 'react';
+import HomeScreen from '../screens/HomeScreen';
 
 const AppNav = () => {
+    const {isLoggedIn} = useContext(AuthContext)
   return (
     <NavigationContainer>
-        <AuthStack />
+      {
+            isLoggedIn ?<HomeScreen /> : <AuthStack />
+      }
     </NavigationContainer>
     
   )
