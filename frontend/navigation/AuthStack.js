@@ -9,9 +9,9 @@ const AuthStack = () => {
     const AuthStackNav = createStackNavigator()
   return (
     <AuthStackNav.Navigator>
-        <AuthStackNav.Screen name="Welcome" component={WelcomeScreen} />
-        <AuthStackNav.Screen name="Login" component={LoginScreen} />
-        <AuthStackNav.Screen name="Register" component={RegisterScreen} />
+        <AuthStackNav.Screen name="Welcome" component={WelcomeScreen} options={{headerShown: false}}/>
+        <AuthStackNav.Screen name="Login" component={LoginScreen} options={{headerShown: false}}/>
+        <AuthStackNav.Screen name="Register" component={RegisterScreen} options={{headerShown: false}}/>
     </AuthStackNav.Navigator>
   )
 }
