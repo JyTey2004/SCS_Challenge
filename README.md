@@ -1,5 +1,31 @@
 # SCS Challenge 2023 - ProDoctor
 
+## Unique Propositions
+1. AI-Driven Health Recommendations:
+    - Implement an AI-powered module that analyzes users' health data and provides personalized recommendations for
+    -  disease prevention
+    -  lifestyle modifications
+    -  healthcare interventions
+    -  This module can take into account factors such as age, medical history, vitals, and health goals to deliver tailored advice and guidance.
+2. Remote Monitoring and Telemedicine:
+    - Enable remote monitoring of vital health indicators, such as
+    - heart rate
+    - blood pressure
+    - glucose levels
+    -  through wearable devices and sensors.
+3. Integrate telemedicine capabilities, allowing users to schedule virtual consultations with healthcare professionals for non-emergency situations, reducing the need for physical visits and enhancing accessibility.
+4. Nutrition and Meal Planning:
+    - Create a module that offers AI-driven nutritional assessments based on users' dietary preferences, restrictions, and health conditions.
+    - Provide personalized meal plans and recipes that promote healthy eating habits. Integrate with smart kitchen appliances to facilitate meal preparation and automate tracking of nutritional intake.
+5. Medication Management:
+    - Implement a module that assists users in managing their medications effectively.
+    - This module can include medication reminders, refill notifications, and drug interaction alerts.
+    - Helps users adhere to their medication schedules and reduces the risk of medication-related issues.
+6. Language Translation and Cultural Integration:
+    - Develop a module that facilitates language translation and cultural integration.
+    - Feature can enable users to communicate with healthcare professionals and other app users in their preferred language.
+    - It promotes inclusivity and ensures seamless communication across diverse ethnic communities.
+
 ## IDEAS
 1. App to analyze health condition based on the data from the smartwatch
 2. App able to get data of user:
