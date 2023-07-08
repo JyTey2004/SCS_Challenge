@@ -6,14 +6,11 @@ import { createUser } from '../../Apis/userApi'
 import { FloatingLabelInput } from 'react-native-floating-label-input';
 import { Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { Divider } from '@react-native-material/core';
-import { useContext } from 'react';
-import { AuthContext } from '../../context/AuthContext';
+import { Divider } from '@react-native-material/core';import { useContext } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const RegisterScreen = () => {
   const navigation = useNavigation()
-//   const {checkLogin} = useContext(AuthContext)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
@@ -32,8 +29,7 @@ const RegisterScreen = () => {
       if (response.isSuccess) {
         // console.log('account:', response.message);
         // Handle the successful response here, e.g., update component state with the fetched account
-        // checkLogin()
-        navigation.navigate('AccountScreen')
+        navigation.navigate('PatientInfoScreen')
       } else {
         Alert.alert(response.message)
         console.log('Failed to get account:', response.message);
@@ -86,7 +82,7 @@ const RegisterScreen = () => {
                         }}
                         inputStyles={{
                             color: 'white',
-                            fontSize: 20,
+                            fontSize: 18,
                             padding: 0,
                             width: '100%',
                             height: 50,
@@ -130,7 +126,7 @@ const RegisterScreen = () => {
                         }}
                         inputStyles={{
                             color: 'white',
-                            fontSize: 20,
+                            fontSize: 18,
                             padding: 0,
                             width: '100%',
                             height: 50,
@@ -174,7 +170,7 @@ const RegisterScreen = () => {
                         }}
                         inputStyles={{
                             color: 'white',
-                            fontSize: 20,
+                            fontSize: 18,
                             padding: 0,
                             width: '100%',
                             height: 50,
@@ -191,7 +187,7 @@ const RegisterScreen = () => {
                 colors={['rgba(50, 50, 50, 0.9)', '#86efac']}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 0 }}
-                className='p-2 rounded-xl mt-3'
+                className='p-2 rounded-xl mt-2'
             >
                 <TouchableOpacity 
                     onPress={() => handleSignUp()}

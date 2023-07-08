@@ -11,6 +11,24 @@ async function createAccount(req, res) {
             message: 'Email already exists' 
         });
     }
+    if (req.body.password.length < 6) {
+        return res.json({ 
+            isSuccess: false,
+            message: 'Password must be at least 6 characters' 
+        });
+    }
+    if (req.body.username.length < 3) {
+        return res.json({ 
+            isSuccess: false,
+            message: 'Username must be at least 3 characters' 
+        });
+    }
+    if (req.body.username.length > 20) {
+        return res.json({ 
+            isSuccess: false,
+            message: 'Username must be less than 20 characters' 
+        });
+    }
     try {
         const account = await User.create(req.body);
         const token = jwt.sign({ id: account._id }, process.env.JWT_KEY, { expiresIn: '30d' });

@@ -32,7 +32,7 @@ const Accordion = ({ iconName, description, image, isExpanded, onExpand }) => {
             style={styles.gradient}
         >
             <View style={styles.rowContainer}>
-                <Ionicons name={iconName} size={28} style={iconStyle}/>
+                <Ionicons name={iconName} size={24} style={iconStyle}/>
                 {isExpanded && (
                   <LinearGradient
                   colors={['rgba(50, 50, 50, 0.0)', 'rgba(255, 255, 255, 0)']}
@@ -60,14 +60,14 @@ const Accordion = ({ iconName, description, image, isExpanded, onExpand }) => {
 const HorizontalAccordion = () => {
   const accordionData = [
     { iconName: 'language-outline', description: 'Multi-Lingual\nSupport' },
-    { iconName: 'body-outline', description: 'Body Temperature\nPulse Rate\nRespiratory Rate'},
-    { iconName: 'heart-outline', description: 'Heart Rate\nBlood Pressure\nBlood Oxygen' },
-    { iconName: 'call-outline', description: 'Telemedication\nVirtual Presciption\nMedical Advice' },
-    { iconName: 'calendar-outline', description: 'Nutrition, Meal, \nMedication Management\n' },
-    { iconName: 'medkit-outline', description: 'AI-Driven \nHealth Recommendations\n' },
+    // { iconName: 'body-outline', description: 'Body Temperature\nPulse Rate\nRespiratory Rate'},
+    // { iconName: 'heart-outline', description: 'Heart Rate\nBlood Pressure\nBlood Oxygen' },
+    { iconName: 'call-outline', description: 'Telemedication\nPresciption\nMedical Advice' },
+    { iconName: 'calendar-outline', description: 'Nutrition \nMedication Management' },
+    { iconName: 'medkit-outline', description: 'AI-Driven \nHealth \nRecommendations' },
   ];
 
-  const [expandedIndex, setExpandedIndex] = useState(5);
+  const [expandedIndex, setExpandedIndex] = useState(3);
 
   const handleAccordionExpand = (index) => {
     setExpandedIndex(index);
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    width: '75%',
+    width: '100%',
   },
   container: {
     height: 200,
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
   },
   collapsedContainer: {
-    width: 50,
+    width: 40,
   },
   expandedContainer: {
     flex: 1,
@@ -117,28 +117,28 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   icon: {
-    color: 'white',
+    color: '#86efac',
     padding: 8,
     borderTopLeftRadius: 30,
     borderBottomLeftRadius: 30,
   },
   iconExpanded: {
-    marginLeft: -5,
+    marginLeft: -10,
     // backgroundColor: '#f2f2f2',
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
   },
   iconCollapsed: {
-    marginLeft: -5,
+    marginLeft: -10,
     // backgroundColor: '#ccc',
     borderTopRightRadius: 30,
     borderBottomRightRadius: 30,
     color: 'black',
   },
   description: {
-    fontSize: 24,
-    color: '#081c15',
-    fontWeight: 'bold',
+    fontSize: 18,
+    color: '#86efac',
+    fontWeight: 'medium',
   },
   descriptionExpanded: {
     backgroundColor: 'transparent',
