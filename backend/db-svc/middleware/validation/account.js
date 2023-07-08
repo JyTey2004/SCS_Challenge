@@ -26,7 +26,7 @@ exports.validateAccount = (req, res, next) => {
 
     const error = result[0].msg;
     res.json({
-        success: false,
+        isSuccess: false,
         message: error
     });
 }

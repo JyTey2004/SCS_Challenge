@@ -13,9 +13,11 @@ export async function createUser(user) {
         throw new Error("Failed to create account");
         }
         const newAccount = response.data;
-        console.log("newAccount:", newAccount.account);
-        const token = newAccount.data.token;
-        await AsyncStorage.setItem("token", token);
+        // console.log("newAccount:", newAccount);
+        if (newAccount.token) {
+            const token = newAccount.token;
+            await AsyncStorage.setItem("token", token);
+        }
         return newAccount;
     } catch (error) {
         console.error("Failed to create account:", error.message);

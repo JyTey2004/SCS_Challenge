@@ -24,7 +24,7 @@ const LoginScreen = () => {
                 // console.log('account:', response.message);
                 // Handle the successful response here, e.g., update component state with the fetched account
                 checkLogin()
-                navigation.navigate('AccountScreen')
+                // navigation.navigate('AccountScreen')
             } else {
                 Alert.alert('Email or password is incorrect')
                 console.log('Failed to get account:', response.message);
@@ -138,7 +138,7 @@ const LoginScreen = () => {
                 colors={['rgba(50, 50, 50, 0.9)', '#86efac']}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 0 }}
-                className='p-2 rounded-xl flex-row items-center'
+                className='p-2 rounded-xl flex-row items-center mt-2'
             >
                 <TouchableOpacity 
                     onPress={() => handleLogin()}
