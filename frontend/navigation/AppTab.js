@@ -39,11 +39,11 @@ const AppTab = () => {
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
             },
-            tabBarActiveTintColor: 'white',
-            tabBarInactiveTintColor: 'purple',
+            tabBarActiveTintColor: '#86efac',
+            tabBarInactiveTintColor: 'white',
             headerShown: false,
             tabBarStyle: {
-            backgroundColor: '#e879f9',
+            backgroundColor: '#1f2937',
             borderTopColor: 'transparent',
             },
             position: 'absolute',
