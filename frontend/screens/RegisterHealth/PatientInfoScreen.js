@@ -21,7 +21,7 @@ const PatientInfoScreen = () => {
 
   return (
     <View className='bg-black flex-1 justify-center items-center'>
-      <View className='p-3 rounded-xl bg-black mb-1 w-4/5'>
+      <View className='p-3 rounded-xl bg-black mb-1' style={{width: '90%'}}>
             <View className='mb-2 flex-row items-center'>
                 <Text className='text-green-300 text-5xl font-bold flex-1'>Let's Get Started</Text>
             </View>

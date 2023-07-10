@@ -2,9 +2,9 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-import HealthStack from './HealthStack';
 import HomeScreen from '../screens/HomeScreen';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import AppStack from './AppStack';
 
 const AppTab = () => {
     const AppTabNav = createBottomTabNavigator();
@@ -49,20 +49,20 @@ const AppTab = () => {
             position: 'absolute',
         })}
     >   
-        <AppTabNav.Screen name="Home" component={HomeScreen} />
-        {/* <AppTabNav.Screen name="HealthStack" component={HealthStack} 
+        {/* <AppTabNav.Screen name="Home" component={AppStack} /> */}
+        <AppTabNav.Screen name="Home" component={AppStack} 
             options={({ route }) => ({
             tabBarStyle: ((route) => {
                 const routeName = getFocusedRouteNameFromRoute(route) ?? ""
-                if (routeName === 'PatientInfoScreen') {
+                if (routeName === 'SnapScreen') {
                 return { display: "none" }
                 } return {
-                backgroundColor: '#e879f9',
+                backgroundColor: '#1f2937',
                 borderTopColor: 'transparent',
                 }
             })(route),
             })}
-        /> */}
+        />
     </AppTabNav.Navigator>
   )
 }

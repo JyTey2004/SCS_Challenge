@@ -42,12 +42,11 @@ const RegisterScreen = () => {
   };
   return (
     <View className='bg-black flex-1 p-3 justify-center items-center'>
-        
-        <View className='p-3 rounded-xl bg-black mb-3 w-3/5'>
+        <View className='p-3 rounded-xl bg-black mb-3' style={{width: '90%'}}>
             <View className='mb-3 flex-row items-center'>
                 <Text className='text-green-300 text-5xl font-bold flex-1'>Register</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Welcome')}>
-                    <Ionicons name="close-circle-outline" size={50} color="#86efac" />
+                    <Ionicons name="close-circle-outline" size={40} color="#86efac" />
                 </TouchableOpacity>
             </View>
             
