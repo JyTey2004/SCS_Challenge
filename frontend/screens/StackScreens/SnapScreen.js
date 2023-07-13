@@ -14,19 +14,19 @@ const SnapScreen = ({route}) => {
     healthDescription = (key) => {
         switch (key) {
             case 'Blood Pressure':
-                return 'Blood pressure is the force of blood on vessel walls, mainly from the heart\'s pumping. It\'s measured in mmHg with two numbers: systolic (heartbeat maximum) over diastolic (between heartbeats minimum).'
+                return 'Blood pressure is the force of blood on vessel walls, mainly from the heart\'s pumping.'
             case 'Average BPM':
-                return 'Heart rate is the speed of the heartbeat measured by the number of contractions (beats) of the heart per minute (bpm). The heart rate can vary according to the body\'s physical needs, including the need to absorb oxygen and excrete carbon dioxide.'
+                return 'Heart rate is the speed of the heartbeat measured by the number of contractions (beats) of the heart per minute (bpm).'
             case 'Weight':
                 return 'Your body weight is the force exerted on the earth by your body. It is commonly measured in kilograms (kg) or pounds (lb)'
             case 'Height':
                 return 'Your height is the distance from the bottom of your feet to the top of your head. It is commonly measured in centimeters (cm) or feet (ft)'
             case 'BMI':
-                return 'Body mass index (BMI) is a value derived from the mass (weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m2, resulting from mass in kilograms and height in metres.'
+                return 'The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m2, resulting from mass in kilograms and height in metres.'
             case 'Blood Sugar':
-                return 'Blood sugar, or blood glucose, is sugar that the bloodstream carries to all the cells in the body to supply energy. Blood sugar or blood glucose measurements represent the amount of sugar being transported in the blood during one instant. The sugar comes from the food we eat.'
+                return 'Blood sugar, or blood glucose, is sugar that the bloodstream carries to all the cells in the body to supply energy.'
             case 'Cholesterol':
-                return 'Cholesterol is a waxy, fat-like substance that\'s found in all the cells in your body. Your body needs some cholesterol to make hormones, vitamin D, and substances that help you digest foods. Your body makes all the cholesterol it needs.'
+                return 'Your body needs some cholesterol to make hormones, vitamin D, and substances that help you digest foods.'
             case 'Oxygen Saturation':
                 return 'Oxygen saturation is a measure of how much oxygen the blood is carrying as a percentage of the maximum it could carry. It can be measured by an instrument called a pulse oximeter. A pulse oximeter is a small, clip-like device that attaches to a body part, like toes or an earlobe.'
         }
@@ -48,6 +48,7 @@ const SnapScreen = ({route}) => {
                     flexDirection: index % 2 === 0 ? 'row-reverse' : 'row',
                     marginBottom: 10,
                 }}
+                key={key}
                 >
                     <View 
                         style={{ 
@@ -78,6 +79,7 @@ const SnapScreen = ({route}) => {
                         style={{ 
                             borderTopRightRadius: index % 2 === 0 ? 50 : 0,
                             borderTopLeftRadius: index % 2 === 0 ? 0 : 50,
+                            justifyContent: 'center',
                          }}
                         >
                             <Text style={{ color: 'white', fontSize: 30, textAlign: index % 2 === 0 ? 'left' : 'right',}} className='font-bold'>{`${key}`}</Text>
