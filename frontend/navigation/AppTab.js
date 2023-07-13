@@ -2,9 +2,11 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-import HealthStack from './HealthStack';
 import HomeScreen from '../screens/HomeScreen';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import AppStack from './AppStack';
+import HealthInfoScreen from '../screens/HealthInfoScreen';
+import UserHealthScreen from '../screens/UserHealthScreen';
 
 const AppTab = () => {
     const AppTabNav = createBottomTabNavigator();
@@ -18,14 +20,15 @@ const AppTab = () => {
                 iconName = focused
                 ? 'planet'
                 : 'planet-outline';
-            } else if (route.name === 'AuthStack' ||  route.name === 'AccountStack') {
+            } else if (route.name === 'Add') {
                 iconName = focused 
-                ? 'person-circle'
-                : 'person-circle-outline';
-            } else if (route.name === 'Rewards') {
+                ? 'medkit'
+                : 'medkit-outline';
+                size = 35;
+            } else if (route.name === 'Status') {
                 iconName = focused 
-                ? 'card'
-                : 'card-outline';
+                ? 'walk'
+                : 'walk-outline';
             } else if (route.name === 'Assignments') {
                 iconName = focused 
                 ? 'reader'
@@ -37,7 +40,7 @@ const AppTab = () => {
             }
     
             // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
+            return <View style={{width: 45, alignItems: 'center'}}><Ionicons name={iconName} size={size} color={color} /></View>; // <Text style={{color: color}}>{route.name}</Text>
             },
             tabBarActiveTintColor: '#86efac',
             tabBarInactiveTintColor: 'white',
@@ -47,22 +50,25 @@ const AppTab = () => {
             borderTopColor: 'transparent',
             },
             position: 'absolute',
+            tabBarLabel:() => {return null},
         })}
     >   
-        <AppTabNav.Screen name="Home" component={HomeScreen} />
-        {/* <AppTabNav.Screen name="HealthStack" component={HealthStack} 
+        <AppTabNav.Screen name="Home" component={AppStack} 
             options={({ route }) => ({
             tabBarStyle: ((route) => {
                 const routeName = getFocusedRouteNameFromRoute(route) ?? ""
-                if (routeName === 'PatientInfoScreen') {
+                if (routeName === 'SnapScreen') {
                 return { display: "none" }
                 } return {
-                backgroundColor: '#e879f9',
+                backgroundColor: '#1f2937',
                 borderTopColor: 'transparent',
                 }
             })(route),
             })}
-        /> */}
+        />
+        <AppTabNav.Screen name="Add" component={HealthInfoScreen} />
+        <AppTabNav.Screen name="Status" component={UserHealthScreen} />
+        
     </AppTabNav.Navigator>
   )
 }

@@ -54,7 +54,7 @@ const HomeCarousel = () => {
                         <View style={styles.maskWrapper}>
                             <View style={styles.maskWrapperTriangle}>
                                 <Text style={styles.mask}>{data[index].title}</Text>
-                                <Text style={styles.maskDes} numberOfLines={2}>{data[index].text}</Text>
+                                {/* <Text style={styles.maskDes} numberOfLines={2}>{data[index].text}</Text> */}
                             </View>
                         </View>
                     }
@@ -78,13 +78,13 @@ const styles = StyleSheet.create({
       borderRadius: 50,
     },
     mask: {
-      fontSize: 60,
+      fontSize: 30,
       color: 'black',
       fontWeight: 'bold',
       position: 'absolute',
-      bottom: 130,
-      left: 230,
-      transform: [{ rotate: '-27deg'}]
+      bottom: 60,
+      left: 120,
+      transform: [{ rotate: '-26deg'}]
     },
     maskDes: {
         fontSize: 30,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         position: 'absolute',
         bottom: 85,
-        left: 305,
+        left: 155,
         transform: [{ rotate: '-27deg'}]
       },
     maskWrapper: {
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
         height: 0,
         borderLeftWidth: 0,
         borderRightWidth: Dimensions.get('window').width,
-        borderTopWidth: 400,
+        borderTopWidth: 200,
         borderLeftColor: 'transparent',
         borderRightColor: 'transparent',
       },

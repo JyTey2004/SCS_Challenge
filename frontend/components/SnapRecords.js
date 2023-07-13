@@ -3,10 +3,11 @@ import React from 'react'
 import { useState } from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 const SnapRecords = () => {
     // const [healthData, setHealthData] = useState()
-
+    const navigation = useNavigation()
     const healthDataBefore = {
         'Blood Pressure': '120/80',
         'Average BPM': '80',
@@ -60,7 +61,10 @@ const SnapRecords = () => {
             <TouchableOpacity style={{ position: 'absolute', top: 20, right:25, backgroundColor: '#1f2937', borderRadius: 5, padding: 3}} >
                 <Ionicons name="bookmark-outline" size={24} color="white" />
             </TouchableOpacity>
-            <View className='h-1/2 w-full bg-gray-800 p-3' style={{ borderBottomEndRadius: 50}}>
+            <TouchableOpacity 
+              className='h-1/2 w-full bg-gray-800 p-3' style={{ borderBottomEndRadius: 50}}
+              onPress={() => navigation.navigate('SnapScreen', { healthDataBefore: healthDataBefore, healthDataAfter: healthDataAfter, key: key })}
+            >
                 <Text style={{ color: 'white', fontSize: 20 }} className='font-bold'>{`${key}:`}</Text>
                 <Text style={{ color: 'white', fontSize: 14 }} className='font-light'>Previous: {healthDataBefore[key]}</Text>
                 <View className='flex-1 justify-end'>
@@ -73,7 +77,7 @@ const SnapRecords = () => {
                         <Text style={{ color: 'white', fontSize: 16, marginLeft: 5 }}>Current: {healthDataAfter[key]}</Text>
                     </LinearGradient>    
                 </View>
-            </View>
+            </TouchableOpacity>
 
         </View>
       ))}
