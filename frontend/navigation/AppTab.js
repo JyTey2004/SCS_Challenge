@@ -7,6 +7,8 @@ import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import AppStack from './AppStack';
 import HealthInfoScreen from '../screens/HealthInfoScreen';
 import UserHealthScreen from '../screens/UserHealthScreen';
+import ServicesScreen from '../screens/ServicesScreen';
+import HealthEnquiryScreen from '../screens/HealthEnquiryScreen';
 
 const AppTab = () => {
     const AppTabNav = createBottomTabNavigator();
@@ -29,14 +31,14 @@ const AppTab = () => {
                 iconName = focused 
                 ? 'walk'
                 : 'walk-outline';
-            } else if (route.name === 'Assignments') {
+            } else if (route.name === 'Services') {
                 iconName = focused 
-                ? 'reader'
-                : 'reader-outline';
-            } else if (route.name === 'Events') {
+                ? 'apps'
+                : 'apps-outline';
+            } else if (route.name === 'Enquiry') {
                 iconName = focused 
-                ? 'calendar'
-                : 'calendar-outline';
+                ? 'call'
+                : 'call-outline';
             }
     
             // You can return any component that you like here!
@@ -66,7 +68,9 @@ const AppTab = () => {
             })(route),
             })}
         />
+        <AppTabNav.Screen name="Services" component={ServicesScreen} />
         <AppTabNav.Screen name="Add" component={HealthInfoScreen} />
+        <AppTabNav.Screen name="Enquiry" component={HealthEnquiryScreen} />
         <AppTabNav.Screen name="Status" component={UserHealthScreen} />
         
     </AppTabNav.Navigator>

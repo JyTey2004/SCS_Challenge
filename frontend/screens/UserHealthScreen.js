@@ -72,7 +72,7 @@ const UserHealthScreen = () => {
   return (
     <SafeAreaView className='bg-black flex-1 items-center'>
         <View style={{alignItems: 'left', width: '97%'}}>
-            <Text style={{ color: 'white', fontSize: 24, marginTop: 10, marginLeft: 10}} className='font-bold'>Health Status</Text>
+            <Text style={{ color: '#86efac', fontSize: 24, marginTop: 10, marginLeft: 10}} className='font-bold'>Health Status</Text>
         </View>
         
         {/* <Divider style={{ backgroundColor: 'white', width: '97%', marginTop: 10}} /> */}
