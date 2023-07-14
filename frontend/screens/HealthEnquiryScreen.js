@@ -17,9 +17,9 @@ const HealthEnquiryScreen = () => {
               imageStyle={{ borderRadius: 20, opacity: 0.4}}
             >
               <View className='flex-row items-center m-3'>
-                <Text style={{ color: '#67e8f9', fontSize: 24, flex: 1 }} className='font-bold'>Doctor</Text>
+                <Text style={{ color: '#86efac', fontSize: 24, flex: 1 }} className='font-bold'>Doctor</Text>
                 <View className='flex-row items-end h-full'>
-                  <Ionicons name='chevron-forward-outline' size={24} color='#67e8f9'/>
+                  <Ionicons name='chevron-forward-outline' size={24} color='#86efac'/>
                 </View>
               </View>
               {/* <Text style={{ color: 'white', fontSize: 14, marginLeft: 10}} className='font-base'>Note: Upload as much health information as you have</Text> */}
@@ -32,9 +32,9 @@ const HealthEnquiryScreen = () => {
                 imageStyle={{ borderRadius: 20, opacity: 0.4}}
               >
                 <View className='flex-row items-center m-3'>
-                  <Text style={{ color: '#67e8f9', fontSize: 24, flex: 1 }} className='font-bold'>Trainee Doctor</Text>
+                  <Text style={{ color: '#86efac', fontSize: 24, flex: 1 }} className='font-bold'>Trainee Doctor</Text>
                   <View className='flex-row items-end h-full'>
-                    <Ionicons name='chevron-forward-outline' size={24} color='#67e8f9'/>
+                    <Ionicons name='chevron-forward-outline' size={24} color='#86efac'/>
                   </View>
                 </View>
                 {/* <Text style={{ color: 'white', fontSize: 14, marginLeft: 10}} className='font-base'>Note: Upload as much health information as you have</Text> */}
@@ -80,14 +80,15 @@ const HealthEnquiryScreen = () => {
             </View>
         </View>
 
+        <Text style={{ color: '#86efac', fontSize: 24, marginTop: 10}} className='font-bold'>Prescriptions</Text>
         <TouchableOpacity className='items-center justify-center' style={{ borderRadius: 10,  width: '100%', height: '8%', marginTop: 10}}>
           <LinearGradient
-            colors={['white', '#86efac']}
+            colors={['#67e8f9', '#86efac']}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
             style={{borderRadius: 10, padding: 5, flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}
           >
-            <Text style={{ color: 'black', fontSize: 20, flex: 1, marginLeft: 5}} className='font-bold'>More information</Text>
+            <Text style={{ color: 'black', fontSize: 20, flex: 1, marginLeft: 5}} className='font-bold'>Buy & Deliver</Text>
             <Ionicons name='chevron-forward-outline' size={24} color='black'/>
           </LinearGradient>
         </TouchableOpacity>

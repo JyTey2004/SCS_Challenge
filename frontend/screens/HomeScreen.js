@@ -9,14 +9,14 @@ import SnapRecords from '../components/SnapRecords'
 const HomeScreen = () => {
   return (
     <SafeAreaView className='flex-1 bg-black'>
-      <View className='m-3'>
-        <View className='flex-row items-center'>
-          <Text className='text-green-300 text-3xl font-bold flex-1'>ProDoctor</Text>
-          <TouchableOpacity className='mr-2'>
-            <Ionicons name="notifications" size={30} color="white" />
-          </TouchableOpacity>
-        </View>
-        <Divider style={{ backgroundColor: 'white', marginTop: 10}} />
+      <View className='flex-row items-center'>
+        <Text className='text-green-300 text-3xl font-bold flex-1'>ProDoctor</Text>
+        <TouchableOpacity className='mr-2'>
+          <Ionicons name="notifications" size={30} color="white" />
+        </TouchableOpacity>
+      </View>
+      <Divider style={{ backgroundColor: 'white', marginTop: 10}} />
+      <ScrollView className='pl-2 pr-2 mb-3'>
         <View className='mt-4 items-center'>
           <HomeCarousel />
         </View>
@@ -48,7 +48,7 @@ const HomeScreen = () => {
         </ScrollView>
        
 
-      </View>
+      </ScrollView>
     </SafeAreaView>
   )
 }
