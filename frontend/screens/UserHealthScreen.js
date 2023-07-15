@@ -142,8 +142,12 @@ const UserHealthScreen = () => {
         <View style={{width: '97%',height: '66%', borderRadius: 30, marginTop: 10 }}>
             <Text style={{ color: '#86efac', fontSize: 24,}} className='font-bold'>AI Recommendations</Text>
             <View style={{width: '100%', height: '50%', marginTop: 10, flexDirection: 'row', alignItems: 'center' }}>
-                <View style={{width: '40%',height: '100%', borderRadius: 30, marginTop: 10, borderWidth: 2, borderColor: '#86efac', padding: 10, marginRight: 10 }}>
-                    <Text style={{ color: 'white', fontSize: 24,}} className='font-bold'>Nutrition</Text>
+                <LinearGradient 
+                    colors={['#86efac', '#86efac']}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 0 }}
+                    style={{width: '40%',height: '100%', borderRadius: 30, marginTop: 10, padding: 10, marginRight: 10 }}>
+                    <Text style={{ fontSize: 24,}} className='font-bold text-gray-800'>Nutrition</Text>
                     <View style={{width: '100%', height: '20%', borderRadius: 10, marginTop: 10, flexDirection: 'row', padding: 5, justifyContent: 'center', backgroundColor: '#1f2937', alignItems: 'center' }}>
                         <Text style={{ color: 'white', fontSize: 18,}} className='font-base'>Calories: </Text>
                         <Text style={{ color: 'white', fontSize: 18,}} className='font-base'>{`${Nutrition['Calories']}`}</Text>
@@ -163,9 +167,13 @@ const UserHealthScreen = () => {
                             <Text style={{ color: 'white', fontSize: 15,}} className='font-base'>{`${Nutrition['Fat']}g`}</Text>
                         </View>
                     </View>
-                </View>
-                <View style={{width: '58%',height: '100%', borderRadius: 30, marginTop: 10, borderWidth: 2, borderColor: '#86efac', padding: 10 }}>
-                    <Text style={{ color: 'white', fontSize: 24,}} className='font-bold'>Diet: {Diet.name}</Text>
+                </LinearGradient>
+                <LinearGradient 
+                    colors={['#67e8f9', '#67e8f9']}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 0 }}
+                    style={{width: '58%',height: '100%', borderRadius: 30, marginTop: 10, padding: 10 }}>
+                    <Text style={{ fontSize: 24,}} className='font-bold text-gray-800'>Diet: {Diet.name}</Text>
                     <View style={{width: '100%', height: '20%', borderRadius: 10, marginTop: 10, flexDirection: 'row', padding: 5, justifyContent: 'center', backgroundColor: '#1f2937', alignItems: 'center' }}>
                         <Text style={{ color: 'white', fontSize: 18}} className='font-base'>{Diet.description}</Text>
                     </View>
@@ -194,7 +202,7 @@ const UserHealthScreen = () => {
                             </LinearGradient>
                         </TouchableOpacity>
                     </View>
-                </View>
+                </LinearGradient>
             </View>
             <View style={{width: '100%', height: '38%', marginTop: 5, alignItems: 'center', marginLeft: 5 }}>
                 {/* <View style={{width: '100%',height: '100%', borderRadius: 30, marginTop: 10, padding: 10, marginRight: 10 }}> */}
@@ -208,7 +216,7 @@ const UserHealthScreen = () => {
                     <View className='flex-row space-x-2' style={{width: '100%', height: '100%'}}>
                         <View style={{ width: '24%', height: '75%'}}>
                             <View style={{width: '100%', height: '30%', borderTopLeftRadius: 20, borderTopRightRadius: 20, marginTop: 10, padding: 5, backgroundColor: '#86efac', alignItems: 'center' }}>
-                                <Text style={{ fontSize: 18,}} className='font-base text-gray-800'>Exercise</Text>
+                                <Text style={{ fontSize: 18,}} className='font-bold text-gray-800'>Exercise</Text>
                             </View>
                             <View style={{width: '100%', height: '70%', borderBottomLeftRadius: 20, borderBottomRightRadius: 20, padding: 8, backgroundColor: '#1f2937' }}>
                                 <View className='flex-row' style={{justifyContent: 'space-between'}}>
@@ -227,7 +235,7 @@ const UserHealthScreen = () => {
                         </View>
                         <View style={{ width: '24%', height: '75%'}}>
                             <View style={{width: '100%', height: '30%', borderTopLeftRadius: 20, borderTopRightRadius: 20, marginTop: 10, padding: 5, backgroundColor: '#86efac', alignItems: 'center' }}>
-                                <Text style={{ fontSize: 18,}} className='font-base text-gray-800'>Sleep</Text>
+                                <Text style={{ fontSize: 18,}} className='font-bold text-gray-800'>Sleep</Text>
                             </View>
                             <View style={{width: '100%', height: '70%', borderBottomLeftRadius: 20, borderBottomRightRadius: 20, padding: 8, backgroundColor: '#1f2937' }}>
                                 <View className='flex-row' style={{justifyContent: 'space-between'}}>
@@ -246,7 +254,7 @@ const UserHealthScreen = () => {
                         </View>
                         <View style={{ width: '24%', height: '75%'}}>
                             <View style={{width: '100%', height: '30%', borderTopLeftRadius: 20, borderTopRightRadius: 20, marginTop: 10, padding: 5, backgroundColor: '#86efac', alignItems: 'center' }}>
-                                <Text style={{ fontSize: 18,}} className='font-base text-gray-800'>Drink</Text>
+                                <Text style={{ fontSize: 18,}} className='font-bold text-gray-800'>Drink</Text>
                             </View>
                             <View style={{width: '100%', height: '70%', borderBottomLeftRadius: 20, borderBottomRightRadius: 20, padding: 8, backgroundColor: '#1f2937' }}>
                                 <View className='flex-row' style={{justifyContent: 'space-between'}}>
@@ -265,7 +273,7 @@ const UserHealthScreen = () => {
                         </View>
                         <View style={{ width: '24%', height: '75%'}}>
                             <View style={{width: '100%', height: '30%', borderTopLeftRadius: 20, borderTopRightRadius: 20, marginTop: 10, padding: 5, backgroundColor: '#86efac', alignItems: 'center' }}>
-                                <Text style={{ fontSize: 18,}} className='font-base text-gray-800'>Supplements</Text>
+                                <Text style={{ fontSize: 18,}} className='font-bold text-gray-800'>Supplements</Text>
                             </View>
                             <View style={{width: '100%', height: '70%', borderBottomLeftRadius: 20, borderBottomRightRadius: 20, padding: 8, backgroundColor: '#1f2937' }}>
                                 <View className='flex-row' style={{justifyContent: 'space-between'}}>
