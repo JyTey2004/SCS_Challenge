@@ -61,6 +61,8 @@ const AppTab = () => {
                 const routeName = getFocusedRouteNameFromRoute(route) ?? ""
                 if (routeName === 'SnapScreen') {
                 return { display: "none" }
+                } else if (routeName === 'CommunityScreen') {
+                return { display: "none" }
                 } return {
                 backgroundColor: '#1f2937',
                 borderTopColor: 'transparent',
