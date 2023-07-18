@@ -5,16 +5,20 @@ import { Divider } from '@react-native-material/core'
 import { Ionicons } from '@expo/vector-icons'
 import ServicesMiniMenu from '../components/ServicesMiniMenu'
 import SnapRecords from '../components/SnapRecords'
+import { useNavigation } from '@react-navigation/native'
 
 const HomeScreen = () => {
+  const navigation = useNavigation()
   return (
     <SafeAreaView className='flex-1 bg-black'>
       <View className='flex-row items-center'>
-        <Text className='text-green-300 text-3xl font-bold flex-1'>ProDoctor</Text>
-        <TouchableOpacity className='mr-2'>
+        <Text className='text-green-300 text-3xl font-bold flex-1'>Thrive</Text>
+        <TouchableOpacity className='mr-2'
+          onPress={() => navigation.navigate('CommunityScreen')}>
           <Ionicons name="people" size={30} color="white" />
         </TouchableOpacity>
-        <TouchableOpacity className='mr-2'>
+        <TouchableOpacity className='mr-2'
+          onPress={() => navigation.navigate('NotificationScreen')}>
           <Ionicons name="notifications" size={30} color="white" />
         </TouchableOpacity>
       </View>
@@ -31,7 +35,7 @@ const HomeScreen = () => {
         <SnapRecords />
         
         <View className='mt-3'>
-          <Text className='text-green-300 text-3xl font-bold'>Services</Text>
+          <Text className='text-green-300 text-3xl font-bold'>Popular Services</Text>
         </View>
 
          <ScrollView 

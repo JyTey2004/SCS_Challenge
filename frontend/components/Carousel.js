@@ -10,21 +10,27 @@ const HomeCarousel = () => {
     data = [
         {
             title: 'Community',
-            text: 'Join our community\nand share your stories!',
+            text: 'Join our community and share your stories!',
             imgUrl: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=1600',
             navigateTo : 'CommunityScreen'
         },
         {
             title: 'Meal Planning',
-            text: 'Find recipes and plan\nyour meals for the week!',
-            imgUrl: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1600',
+            text: 'Find recipes and plan your meals for the week!',
+            imgUrl: 'https://img.freepik.com/free-photo/close-up-hand-with-food-container_23-2148484667.jpg?size=626&ext=jpg&ga=GA1.2.1004410598.1686174404&semt=ais',
             navigateTo : 'MealPlanningScreen'
         },
         {
             title: 'Virtual Doctor',
-            text: 'Get a virtual doctor to\nhelp you with your health!',
+            text: 'Get a virtual doctor to help you with your health!',
             imgUrl: 'https://img.freepik.com/free-photo/filling-medical-record_1098-18239.jpg?size=626&ext=jpg&ga=GA1.1.1004410598.1686174404&semt=sph',
             navigateTo : 'VirtualDoctorScreen'
+        },
+        {
+            title: 'Calorie Challenge',
+            text: 'Join our calorie challenge and get fit!',
+            imgUrl: 'https://img.freepik.com/free-photo/woman-standing-exercising-with-red-dumbbell-gym_1150-16555.jpg?size=626&ext=jpg&ga=GA1.1.1004410598.1686174404&semt=sph',
+            navigateTo : 'CalorieChallengeScreen'
         },
     ]
 
@@ -52,10 +58,16 @@ const HomeCarousel = () => {
                             style={{ width: '100%', height: '100%', borderRadius: 30, justifyContent: 'flex-end', alignItems: 'flex-start' }}
                             source={{ uri: data[index].imgUrl }}
                         >
-                            <Text style={{ textAlign: 'center', fontSize: 50, fontWeight: 'bold', color: 'black', marginLeft: 20, textShadowColor: 'white', textShadowRadius: 10, textShadowOffset: { width: 1, height: 1 } 
+                          <View style={{ width: '100%', height: '30%', backgroundColor: 'rgba(255, 255, 255, 0.4)', justifyContent: 'flex-end', alignItems: 'flex-start', padding: 5}}>
+                            <Text style={{ textAlign: 'center', fontSize: 50, fontWeight: 'bold', color: 'black', marginLeft: 20
                           }}>
                                 {data[index].title}
                             </Text>
+                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'black', marginLeft: 20, 
+                          }}>
+                                {data[index].text}
+                            </Text>
+                            </View>
                         </ImageBackground>
                     </TouchableOpacity>
                     // <MaskedView
