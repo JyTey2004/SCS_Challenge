@@ -63,6 +63,8 @@ const AppTab = () => {
                 return { display: "none" }
                 } else if (routeName === 'CommunityScreen') {
                 return { display: "none" }
+                }  else if (routeName === 'NotificationScreen') {
+                return { display: "none" }
                 } return {
                 backgroundColor: '#1f2937',
                 borderTopColor: 'transparent',
