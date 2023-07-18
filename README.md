@@ -1,4 +1,4 @@
-# SCS Challenge 2023 - ProDoctor
+# SCS Challenge 2023 - Thrive
 
 ## Unique Propositions
 1. AI-Driven Health Recommendations:
